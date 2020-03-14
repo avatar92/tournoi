@@ -17,17 +17,11 @@ router.post('/addEquipe',(req,res)=>{
     })
     newEquipe.save().then(equipe=>res.status(200).json(equipe)).catch(e=>console.log(e))
 })
-//@route /api/all
+//@route /api/allEquipe
 //@desc fetch all equipe
 //@access public
 router.get('/all',(req,res)=>{
     Equipe.find().then(equipes=>res.status(200).send(equipes))
 })
-
-
-
-
-
-
 
 module.exports = router;
